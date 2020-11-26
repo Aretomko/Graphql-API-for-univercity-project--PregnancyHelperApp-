@@ -1,4 +1,12 @@
 type Appointment {
     id : ID!
-    date : 
+    date : String!
+    user: User!
+}
+extend type Mutation{
+    addNewAppointment(date:String!, userId:Int):Appointment
+    deleteAppointment(appointmentId: Int!):Appointment
+}
+extend type Query{
+    findAllAppointments:[Appointment]
 }
