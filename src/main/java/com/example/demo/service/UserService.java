@@ -18,7 +18,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepo userRepo;
 
-    @Autowired
+    @Autowired(required = false)
     private MailSender mailSender;
 
 
