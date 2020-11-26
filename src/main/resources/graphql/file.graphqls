@@ -1,0 +1,13 @@
+type File{
+    id: ID!
+    fileLink : String!
+    historyRecord : HistoryRecord
+}
+extend type Mutation {
+    createFile(fileLink: String!, historyRecordId: Int!):File
+    deleteFile(fileId:Int!):File
+}
+extend type Query {
+    findAllFiles:[File]
+    findFileById(fileId:Int!):File
+}

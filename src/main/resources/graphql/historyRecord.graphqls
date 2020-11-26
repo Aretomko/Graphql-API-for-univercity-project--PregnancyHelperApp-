@@ -1,0 +1,13 @@
+type HistoryRecord{
+    id :ID!
+    text:String
+    files:[File]
+}
+extend type Mutation{
+    createHistoryRecord(text:String):HistoryRecord
+    deleteHistoryRecord(historyRecordId:Int!):HistoryRecord
+}
+extend type Query {
+    findAllHistoryRecords:[HistoryRecord]
+    findHistoryRecordById(historyRecordId:Int!):HistoryRecord
+}

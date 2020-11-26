@@ -1,0 +1,17 @@
+type User {
+    id : ID!
+    username : String!
+    surname : String
+    password: String
+    email : String
+    advices: [Advice]
+}
+type Mutation {
+    createUser(username: String!, surname: String!, email: String!): User
+    deleteUser(id: Int): User
+}
+type Query {
+    getAllUsers: [User]!
+    findUserById(id: Int): User
+    findUserByUsername(username: String):User
+}

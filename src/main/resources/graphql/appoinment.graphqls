@@ -1,0 +1,4 @@
+type Appointment {
+    id : ID!
+    date : 
+}

@@ -1,0 +1,13 @@
+type Advice {
+    id : ID!
+    text : String
+    user : User
+}
+extend type Mutation {
+    createAdvice(text: String!, userId: Int!):Advice
+    deleteAdvice(adviceId: Int!):Advice
+}
+extend type Query{
+    findAllAdvices:[Advice]
+    findAdviceById(id: Int):Advice
+}
